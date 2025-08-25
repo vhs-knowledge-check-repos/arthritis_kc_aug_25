@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arthritis Knowledge Check</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9fb; color: #333;">
+
+  <!-- Header -->
+  <div style="background: #004d80; color: #fff; padding: 20px; text-align: center;">
+    <h1 style="margin: 0;">Arthritis Knowledge Check</h1>
+    <p style="margin: 5px 0 0;">Test what you’ve learned!</p>
+  </div>
+
+  <!-- Quiz Container -->
+  <div style="max-width: 850px; margin: 30px auto; background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+
+    <form id="quizForm">
+
+      <!-- Question Template Example -->
+      <div style="margin-bottom: 20px;" id="q1-container">
+        <p><strong>1. About how many U.S. adults are living with arthritis?</strong></p>
+        <label><input type="radio" name="q1" value="a"> About 10 million</label><br>
+        <label><input type="radio" name="q1" value="b"> About 54 million</label><br>
+        <label><input type="radio" name="q1" value="c"> Over 100 million</label>
+        <div class="feedback" style="margin-top:5px; font-weight:bold;"></div>
+      </div>
+
+      <div style="margin-bottom: 20px;" id="q2-container">
+        <p><strong>2. Arthritis is mainly a condition that affects:</strong></p>
+        <label><input type="radio" name="q2" value="a"> The skin</label><br>
+        <label><input type="radio" name="q2" value="b"> The joints and connective tissues</label><br>
+        <label><input type="radio" name="q2" value="c"> The lungs</label>
+        <div class="feedback" style="margin-top:5px; font-weight:bold;"></div>
+      </div>
+
+      <div style="margin-bottom: 20px;" id="q3-container">
+        <p><strong>3. True or False: Arthritis is one of the leading causes of work disability among adults.</strong></p>
+        <label><input type="radio" name="q3" value="true"> True</label><br>
+        <label><input type="radio" name="q3" value="false"> False</label>
+        <div class="feedback" style="margin-top:5px; font-weight:bold;"></div>
+      </div>
+
+      <div style="margin-bottom: 20px;" id="q4-container">
+        <p><strong>4. Which of the following is a risk factor you can control?</strong></p>
+        <label><input type="radio" name="q4" value="a"> Age</label><br>
+        <label><input type="radio" name="q4" value="b"> Family history</label><br>
+        <label><input type="radio" name="q4" value="c"> Smoking</label>
+        <div class="feedback" style="margin-top:5px; font-weight:bold;"></div>
+      </div>
+
+      <div style="margin-bottom: 20px;" id="q5-container">
+        <p><strong>5. The most common symptoms of arthritis include:</strong></p>
+        <label><input type="radio" name="q5" value="a"> Joint pain and stiffness</label><br>
+        <label><input type="radio" name="q5" value="b"> Shortness of breath</label><br>
+        <label><input type="radio" name="q5" value="c"> Skin rash</label>
+        <div class="feedback" style="margin-top:5px; font-weight:bold;"></div>
+      </div>
+
+      <div style="margin-bottom: 20px;" id="q6-container">
+        <p><strong>6. Which test might a doctor use to help diagnose arthritis?</strong></p>
+        <label><input type="radio" name="q6" value="a"> X-rays</label><br>
+        <label><input type="radio" name="q6" value="b"> Eye exam</label><br>
+        <label><input type="radio" name="q6" value="c"> Hearing test</label>
+        <div class="feedback" style="margin-top:5px; font-weight:bold;"></div>
+      </div>
+
+      <div style="margin-bottom: 20px;" id="q7-container">
+        <p><strong>7. Which of these is a joint-friendly physical activity?</strong></p>
+        <label><input type="radio" name="q7" value="a"> Walking</label><br>
+        <label><input type="radio" name="q7" value="b"> Sprinting</label><br>
+        <label><input type="radio" name="q7" value="c"> Heavy weightlifting</label>
+        <div class="feedback" style="margin-top:5px; font-weight:bold;"></div>
+      </div>
+
+      <div style="margin-bottom: 20px;" id="q8-container">
+        <p><strong>8. True or False: There is currently a cure for arthritis.</strong></p>
+        <label><input type="radio" name="q8" value="true"> True</label><br>
+        <label><input type="radio" name="q8" value="false"> False</label>
+        <div class="feedback" style="margin-top:5px; font-weight:bold;"></div>
+      </div>
+
+      <div style="margin-bottom: 20px;" id="q9-container">
+        <p><strong>9. Who is the specialist trained to diagnose and treat arthritis?</strong></p>
+        <label><input type="radio" name="q9" value="a"> Rheumatologist</label><br>
+        <label><input type="radio" name="q9" value="b"> Cardiologist</label><br>
+        <label><input type="radio" name="q9" value="c"> Dermatologist</label>
+        <div class="feedback" style="margin-top:5px; font-weight:bold;"></div>
+      </div>
+
+      <div style="margin-bottom: 20px;" id="q10-container">
+        <p><strong>10. Which is NOT a common arthritis management strategy?</strong></p>
+        <label><input type="radio" name="q10" value="a"> Staying physically active</label><br>
+        <label><input type="radio" name="q10" value="b"> Protecting your joints</label><br>
+        <label><input type="radio" name="q10" value="c"> Ignoring symptoms</label>
+        <div class="feedback" style="margin-top:5px; font-weight:bold;"></div>
+      </div>
+
+      <div style="text-align: center; margin-top: 20px;">
+        <button type="button" onclick="checkAnswers()" style="background: #004d80; color: #fff; border: none; padding: 12px 25px; border-radius: 8px; font-size: 1em; cursor: pointer;">
+          Submit Quiz
+        </button>
+      </div>
+    </form>
+
+    <!-- Results -->
+    <div id="result" style="margin-top: 30px; text-align: center; font-size: 1.3em; font-weight: bold;"></div>
+  </div>
+
+  <script>
+    function checkAnswers() {
+      const answers = {
+        q1: "b",
+        q2: "b",
+        q3: "true",
+        q4: "c",
+        q5: "a",
+        q6: "a",
+        q7: "a",
+        q8: "false",
+        q9: "a",
+        q10: "c"
+      };
+
+      let score = 0;
+
+      for (let q in answers) {
+        const container = document.getElementById(q + "-container");
+        const feedback = container.querySelector(".feedback");
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        
+        // Reset styles before grading
+        container.style.border = "2px solid transparent";
+        feedback.innerHTML = "";
+
+        if (selected) {
+          if (selected.value === answers[q]) {
+            score++;
+            container.style.border = "2px solid green";
+            feedback.innerHTML = "✅ Correct!";
+            feedback.style.color = "green";
+          } else {
+            container.style.border = "2px solid red";
+            feedback.innerHTML = "❌ Incorrect. Correct answer: " + answers[q].toUpperCase();
+            feedback.style.color = "red";
+          }
+        } else {
+          container.style.border = "2px solid orange";
+          feedback.innerHTML = "⚠️ No answer selected.";
+          feedback.style.color = "orange";
+        }
+      }
+
+      const result = document.getElementById("result");
+      result.innerHTML = "You scored " + score + " out of 10!";
+      result.style.color = score >= 7 ? "green" : "red";
+    }
+  </script>
+
+</body>
+</html>
